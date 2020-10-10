@@ -2,17 +2,57 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-attachment: fixed;
 }
 
 body {
-    background-image: linear-gradient(180deg, #7887ab, #4f628e);
-    color: white;
-    font-family: "Raleway", sans-serif;
+    background-image: url(bg3.webp);
+    color: black;
+    font-family:sans-serif;
     min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dT {
+    color: rgb(250, 250, 250);
+    position: absolute;
+    display: flex;
+    text-align: center;
+    width: 15rem;
+    padding: 5px;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    font-style: italic;
+    border-radius: 20px;
+    background-color: rgba(104, 101, 101, 0.473);
+}
+.dTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;    
+    padding-bottom: 0;
 }
 
 header {
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+h1 {
+    font-family: 'Sansita Swashed';
+    font-size: 5rem;
+    text-shadow: 3px 3px white;
+
+}
+h2 {
+    font-size: 1rem;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 header,
@@ -22,16 +62,23 @@ form {
     justify-content: center;
     align-items: center;
 }
+
+/** calender **/
+
+
+/** **/
+
 form input, 
 form button {
+    border: none;
     padding: 0.5rem;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background: white;
 }
 
 form button {
-    color: rgb(16, 38, 233);
+    color: rgba(114, 176, 228, 0.856);
     background: white;
     width: 4rem;
     cursor: pointer;
@@ -39,7 +86,7 @@ form button {
 }
 
 form button:hover {
-    background-color: rgb(17, 127, 218);
+    background-color: rgba(17, 128, 218, 0.5);
     color: white;
 }
 
@@ -47,6 +94,7 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 2rem;
 
 }
 .todo-List {
@@ -56,10 +104,11 @@ form button:hover {
 
 .todo {
     margin: 0.5rem;
-    width: 35rem;
+    width: 30rem;
+    height: 40px;
     background-color: white;
     color: black;
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: flex;
     list-style: none;
     justify-content: space-between;
@@ -74,7 +123,7 @@ form button:hover {
 .trash-btn,
 .complete-btn {
     border: none;
-    padding: 1rem;
+    padding: .5rem;
     cursor: pointer;
     font-size: 1rem;
     background-color: rgb(70, 145, 206);
@@ -82,11 +131,13 @@ form button:hover {
 }
 
 .complete-btn {
-    background-color: rgb(18, 189, 18);
+    background-color: rgb(38, 167, 38);
+    height: 40px;
 }
 
 .trash-btn {
-    background-color: rgb(211, 39, 39);
+    background-color: rgb(218, 81, 81);
+    height: 40px;
 }
 
 .todo-item {
@@ -101,11 +152,50 @@ form button:hover {
 
 .completed {
     text-decoration: line-through;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .fall {
     transform: translateY(13rem);
     opacity: 0; 
     transition: .3s;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+    background-color: white;
+  }
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+select {
+    color: rgba(37, 139, 223, 0.856);
+    font-family: "Raleway", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+    padding: 1rem;
+  }
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: rgba(114, 176, 228, 0.856);
+    cursor: pointer;
+    pointer-events: none;
+  }
+.select:hover::after {
+    background: white;
+    color: rgb(33, 127, 204);
 }
